@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
                                     child: Row(
                                       children: [
                                         Text(
-                                          'Baca Al Quran',
+                                          "Baca Al-Qur'an",
                                           style: TextStyle(
                                             color: AppColors.white,
                                             fontSize: 20.sp,
