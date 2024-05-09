@@ -26,7 +26,6 @@ class ApiService {
       final response = await client
           .get(Uri.parse('https://equran.id/api/v2/surat/$surahId'));
 
-
       return Right(
         SurahDetailResponse.fromJson(jsonDecode(response.body)).data,
       );

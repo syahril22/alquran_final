@@ -45,7 +45,7 @@ class SurahDetail {
   String deskripsi;
   Map<String, String> audioFull;
   List<Ayat> ayat;
-  RelatedSurahInfo suratSelanjutnya;
+  RelatedSurahInfo? suratSelanjutnya;
   RelatedSurahInfo? suratSebelumnya;
 
   SurahDetail({
@@ -73,7 +73,7 @@ class SurahDetail {
         audioFull: Map.from(json["audioFull"])
             .map((k, v) => MapEntry<String, String>(k, v)),
         ayat: List<Ayat>.from(json["ayat"].map((x) => Ayat.fromJson(x))),
-        suratSelanjutnya: RelatedSurahInfo.fromJson(json["suratSelanjutnya"]),
+        suratSelanjutnya: json["suratSelanjutnya"] is bool ? null : RelatedSurahInfo.fromJson(json["suratSelanjutnya"]),
         suratSebelumnya: json["suratSebelumnya"] is bool
             ? null
             : RelatedSurahInfo.fromJson(json["suratSebelumnya"]),
@@ -90,7 +90,7 @@ class SurahDetail {
         "audioFull":
             Map.from(audioFull).map((k, v) => MapEntry<String, dynamic>(k, v)),
         "ayat": List<dynamic>.from(ayat.map((x) => x.toJson())),
-        "suratSelanjutnya": suratSelanjutnya.toJson(),
+        "suratSelanjutnya": suratSelanjutnya?.toJson() ?? false,
         "suratSebelumnya": suratSebelumnya,
       };
 }
