@@ -3,7 +3,6 @@ import 'package:flutter_ahlul_quran_app/commons/constants.dart';
 import 'package:flutter_ahlul_quran_app/cubit/surah/surah_cubit.dart';
 import 'package:flutter_ahlul_quran_app/ui/ayah_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SurahPage extends StatefulWidget {
   const SurahPage({super.key});
@@ -43,6 +42,9 @@ class _SurahPageState extends State<SurahPage> {
         if (state is SurahLoaded) {
           return ListView.builder(
             itemBuilder: (context, index) {
+              if (index >= state.listSurah.length) {
+                return null;
+              }
               final surah = state.listSurah[index];
               return Hero(
                 tag: "surah-${surah.nomor}",
