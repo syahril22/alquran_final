@@ -53,8 +53,8 @@ class _AyahPageState extends State<AyahPage> {
                   return const Divider();
                 },
                 itemCount: isAlFatihah
-                    ? state.detail.ayat.length + 1
-                    : state.detail.ayat.length,
+                    ? state.detail.ayat.length
+                    : state.detail.ayat.length + 1,
                 itemBuilder: (context, index) {
                   if (index == 0 && !isAlFatihah) {
                     return const Padding(
