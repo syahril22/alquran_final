@@ -29,9 +29,10 @@ class MyApp extends StatelessWidget {
           splitScreenMode: true,
           builder: (context, child) {
             return MaterialApp(
+              debugShowCheckedModeBanner: false,
               title: 'Ahlul Quran App',
               theme: ThemeData(
-                primarySwatch: Colors.blue,
+                primarySwatch: Colors.green,
                 fontFamily: GoogleFonts.poppins().fontFamily,
               ),
               home: const HomePage(),

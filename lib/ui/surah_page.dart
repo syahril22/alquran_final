@@ -31,7 +31,7 @@ class _SurahPageState extends State<SurahPage> {
         ),
         iconTheme: const IconThemeData(color: Colors.white),
         centerTitle: true,
-        backgroundColor: AppColors.primary,
+        backgroundColor: Colors.black,
       ),
       body: BlocBuilder<SurahCubit, SurahState>(builder: (context, state) {
         if (state is SurahLoading) {
@@ -62,7 +62,7 @@ class _SurahPageState extends State<SurahPage> {
                     },
                     child: ListTile(
                       leading: CircleAvatar(
-                        backgroundColor: AppColors.primary,
+                        backgroundColor: Colors.black,
                         child: Text(
                           "${surah.nomor}",
                           style: const TextStyle(

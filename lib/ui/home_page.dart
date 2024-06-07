@@ -18,19 +18,19 @@ class _HomePageState extends State<HomePage> {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: Colors.green,
       body: Container(
         constraints: BoxConstraints(
           maxHeight: size.height,
           maxWidth: size.width,
         ),
         decoration: const BoxDecoration(
-          color: AppColors.background,
+          color: Colors.black,
           image: DecorationImage(
             image: AssetImage("assets/praying.jpg"),
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
-              AppColors.background,
+              Colors.black,
               BlendMode.color,
             ),
           ),
@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
                   Text(
                     "Al-Qur'an",
                     style: TextStyle(
-                      color: AppColors.primary,
+                      color: Colors.black,
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                     ),
@@ -58,11 +58,11 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Material(
-                    color: AppColors.primary,
+                    color: Colors.black,
                     borderRadius: BorderRadius.circular(24.r),
                     child: InkWell(
                       borderRadius: BorderRadius.circular(24.r),
-                      splashColor: AppColors.background.withAlpha(100),
+                      splashColor: Colors.black.withAlpha(100),
                       onTap: () => {
                         Navigator.push(
                           context,
@@ -136,13 +136,6 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 16.sp),
-                  Text(
-                    "By Nur Ihsan Al Ghifari",
-                    style: TextStyle(
-                      color: AppColors.primaryDark.withAlpha(100),
-                    ),
-                  )
                 ],
               ),
             ),
@@ -155,8 +148,8 @@ class _HomePageState extends State<HomePage> {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      AppColors.primaryDark.withAlpha(0),
-                      AppColors.primary,
+                      Colors.black.withAlpha(0),
+                      Colors.black,
                     ],
                   ),
                 ),
@@ -204,15 +197,6 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                         ),
-                      ),
-                    ),
-                    Positioned(
-                      right: 24.sp,
-                      top: 24.sp,
-                      child: SizedBox(
-                        width: 40.w,
-                        height: 32.h,
-                        child: SvgPicture.asset('assets/petik.svg'),
                       ),
                     ),
                   ],

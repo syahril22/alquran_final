@@ -34,7 +34,7 @@ class _AyahPageState extends State<AyahPage> {
               color: Colors.white,
             ),
           ),
-          backgroundColor: AppColors.primary,
+          backgroundColor: Colors.black,
           iconTheme: const IconThemeData(color: Colors.white),
           centerTitle: true,
         ),
@@ -85,7 +85,7 @@ class _AyahPageState extends State<AyahPage> {
                         horizontal: 20.sp,
                       ),
                       leading: CircleAvatar(
-                        backgroundColor: AppColors.primary,
+                        backgroundColor: Colors.black,
                         child: Text(
                           "${isAlFatihah ? index + 1 : index}",
                           style: const TextStyle(color: Colors.white),
